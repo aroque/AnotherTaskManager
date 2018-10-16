@@ -1,0 +1,12 @@
+﻿@using AnotherTaskManager.App.ViewModels.Task
+@model TaskViewModel
+
+<form asp-action="Create" method="post">
+    <div class="form-group">
+        <label asp-for="Name"></label>
+        <input type="text" asp-for="Name" />
+        <span asp-validation-for="Name" class="text-danger"></span>
+    </div>
+    <input class="btn btn-success" type="submit" value="Submit" />
+    <a type="button" class="btn btn-primary" asp-action="Index">Go Back</a>
+</form>

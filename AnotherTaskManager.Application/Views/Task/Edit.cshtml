@@ -1,0 +1,18 @@
+﻿@using AnotherTaskManager.App.ViewModels.Task
+@model TaskViewModel
+<form asp-action="Edit" method="post">
+    <div class="form-group">
+        <label asp-for="Name"></label>
+        <input type="text" asp-for="Name" />
+        <span asp-validation-for="Name" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="StatusId"></label>
+        <select asp-for="StatusId"
+                asp-items="@(new SelectList(Model.TaskStatuses, "Id", "Description"))"></select>
+    </div>
+    @Html.HiddenFor(m => m.StatusChanges)
+    @Html.HiddenFor(m => m.TaskStatuses)
+    <input class="btn btn-success" type="submit" value="Submit"/>
+    <a type="button" class="btn btn-primary" asp-action="Index">Go Back</a>
+</form>

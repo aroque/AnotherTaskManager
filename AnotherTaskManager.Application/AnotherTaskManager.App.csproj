@@ -1,0 +1,38 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.App" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="2.1.4" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="2.1.4" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="2.1.4" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.1.5" />
+    <PackageReference Include="bootstrap" Version="4.1.3" />
+  </ItemGroup>
+  <ItemGroup>
+  <DotNetCliToolReference Include="Microsoft.EntityFrameworkCore.Tools.DotNet" Version="2.1.1" />
+</ItemGroup>
+
+  <ItemGroup>
+    <Compile Remove="Models\ATMContext.cs" />
+    <Compile Remove="Models\AppModels\TaskModel.cs" />
+    <Compile Remove="ATMContext.cs" />
+    <Compile Remove="ViewModels\Task\CreateViewModel.cs" />
+    <Compile Remove="Models\Constants\TaskStatus.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Views\Task\" />
+    <Folder Include="ViewModels\" />
+    <Folder Include="ViewModels\Task\" />
+    <Folder Include="Models\" />
+    <Folder Include="Models\Repositories\" />
+    <Folder Include="Models\Mappers\" />
+    <Folder Include="Models\DataModels\" />
+    <Folder Include="Models\Mappers\Interfaces\" />
+    <Folder Include="Models\Enumerators\" />
+    <Folder Include="Models\ServiceModels\" />
+  </ItemGroup>
+</Project>

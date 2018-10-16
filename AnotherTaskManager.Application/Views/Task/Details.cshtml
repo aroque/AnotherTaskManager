@@ -1,0 +1,25 @@
+﻿@using AnotherTaskManager.App.ViewModels.Task
+@model TaskViewModel
+<div>
+    <div class="form-group">
+        <label asp-for="Name"></label>
+        <input type="text" asp-for="Name" disabled />
+    </div>
+    <div class="form-group">
+        <label asp-for="StatusDescription"></label>
+        <input asp-for="StatusDescription" disabled />
+    </div>
+    <div class="form-group">
+        <label asp-for="StatusChanges"></label>
+        <input asp-for="StatusChanges" disabled />
+    </div>
+    <div class="form-group">
+        <label asp-for="DateCreated"></label>
+        <input asp-for="DateCreated" disabled />
+    </div>
+    <div class="form-group">
+        <label asp-for="DateModified"></label>
+        <input asp-for="DateModified" disabled />
+    </div>
+    <a type="button" class="btn btn-primary" asp-action="Index">Go Back</a>
+</div>
